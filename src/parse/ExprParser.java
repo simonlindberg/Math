@@ -214,7 +214,7 @@ public class ExprParser extends StreamTokenizer implements InputConstants {
 	return false;
     }
 
-    public static String[] getValidInputs() {
+    public static String[] validUnaryInputs() {
 	return validUnaryOp;
     }
 }
