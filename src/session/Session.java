@@ -158,11 +158,9 @@ public class Session {
     }
 
     private boolean isValidConsName(String name) {
-	ExprParser.getValidInputs();
-	for (String invalid : constants.keySet()) {
-	    if (name.equals(invalid)) {
-		return false;
-	    }
+	if (name.equals("pi") || name.equals("E") || name.equals("e")
+		|| name.equals("Pi") || name.equals("PI")) {
+	    return false;
 	}
 	for (String invalid : InputConstants.validUnaryOp) {
 	    if (name.equals(invalid)) {
